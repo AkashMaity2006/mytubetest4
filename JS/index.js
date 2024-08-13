@@ -781,7 +781,7 @@ document.getElementById("containFeedDiv1").addEventListener("scroll",(e)=>{
     
     if((document.getElementById("containFeedDiv1").scrollHeight - (document.getElementById("containFeedDiv1").clientHeight + document.getElementById("containFeedDiv1").scrollTop)) < 1){
         
-        alert("working")
+        
         videosDetailsFetching("containFeedDiv1","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMixedVideosController");      
     } 
     /*else if(document.getElementById("containFeedDiv1").scrollTop == 0){
