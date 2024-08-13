@@ -779,7 +779,7 @@ document.getElementById("libraryPageLikedVideosDivId").addEventListener("click",
 
 document.getElementById("containFeedDiv1").addEventListener("scroll",(e)=>{
     
-    if((document.getElementById("containFeedDiv1").scrollHeight - (document.getElementById("containFeedDiv1").clientHeight + document.getElementById("containFeedDiv1").scrollTop)) < 150){
+    if((document.getElementById("containFeedDiv1").scrollHeight - (document.getElementById("containFeedDiv1").clientHeight + document.getElementById("containFeedDiv1").scrollTop)) < 1){
         
         alert("working")
         videosDetailsFetching("containFeedDiv1","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMixedVideosController");      
@@ -791,7 +791,7 @@ document.getElementById("containFeedDiv1").addEventListener("scroll",(e)=>{
 
 document.getElementById("allMyVideoListOfMyChanelDivId").addEventListener("scroll",(e)=>{
     
-    if((document.getElementById("allMyVideoListOfMyChanelDivId").scrollHeight - (document.getElementById("allMyVideoListOfMyChanelDivId").clientHeight + document.getElementById("allMyVideoListOfMyChanelDivId").scrollTop)) < 150){
+    if((document.getElementById("allMyVideoListOfMyChanelDivId").scrollHeight - (document.getElementById("allMyVideoListOfMyChanelDivId").clientHeight + document.getElementById("allMyVideoListOfMyChanelDivId").scrollTop)) < 1){
         
         videosDetailsFetching("allMyVideoListOfMyChanelDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMyVideos");      
     }           
@@ -799,14 +799,14 @@ document.getElementById("allMyVideoListOfMyChanelDivId").addEventListener("scrol
 
 document.getElementById("subscribePageVideosDivId").addEventListener("scroll",(e)=>{
     
-    if((document.getElementById("subscribePageVideosDivId").scrollHeight - (document.getElementById("subscribePageVideosDivId").clientHeight + document.getElementById("subscribePageVideosDivId").scrollTop)) < 150){
+    if((document.getElementById("subscribePageVideosDivId").scrollHeight - (document.getElementById("subscribePageVideosDivId").clientHeight + document.getElementById("subscribePageVideosDivId").scrollTop)) < 1){
         subscribationChanelChangeAndGettingVideo("new-videos",allSubscribiedChanels.chhosenChanel.allDeatils.userId);
     }           
 })
 
 document.getElementById("libraryPageWatchedVideosDivId").addEventListener("scroll",(e)=>{
     
-    if((document.getElementById("libraryPageWatchedVideosDivId").scrollHeight - (document.getElementById("libraryPageWatchedVideosDivId").clientHeight + document.getElementById("libraryPageWatchedVideosDivId").scrollTop)) < 150){
+    if((document.getElementById("libraryPageWatchedVideosDivId").scrollHeight - (document.getElementById("libraryPageWatchedVideosDivId").clientHeight + document.getElementById("libraryPageWatchedVideosDivId").scrollTop)) < 1){
         
         videosDetailsFetching("libraryPageWatchedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingWatchedVideos");      
     }           
@@ -814,7 +814,7 @@ document.getElementById("libraryPageWatchedVideosDivId").addEventListener("scrol
 
 document.getElementById("libraryPageLikedVideosDivId").addEventListener("scroll",(e)=>{
     
-    if((document.getElementById("libraryPageLikedVideosDivId").scrollHeight - (document.getElementById("libraryPageLikedVideosDivId").clientHeight + document.getElementById("libraryPageLikedVideosDivId").scrollTop)) < 150){
+    if((document.getElementById("libraryPageLikedVideosDivId").scrollHeight - (document.getElementById("libraryPageLikedVideosDivId").clientHeight + document.getElementById("libraryPageLikedVideosDivId").scrollTop)) < 1){
         
         videosDetailsFetching("libraryPageLikedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingLikedVideos");      
     }           
