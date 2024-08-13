@@ -1,0 +1,792 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: sans-serif;
+}
+*::-webkit-scrollbar{
+    display:none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+body{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: black;
+}
+video::-webkit-media-controls-volume-slider {
+    display:none;
+}
+video::-webkit-media-controls-mute-button {
+    display:none;
+}
+@media only screen and (max-width: 600px) {
+    #menuBoxDiv{
+        display: none;
+    }
+    #headerSearchBoxDiv{
+        display:none;
+    }
+    #headerSearchDiv{
+        display:block;
+        position:absolute;
+        top:15px;
+        right:20px;
+    }
+    #menuBoxDiv{
+        width:160px;
+    }
+    #menuBoxBackSupportBox{
+        width:calc(100% - 160px);
+    }
+    .feedVideoCardClass{
+        width:100%;
+        margin:5px 0px 5px 0px;
+    }
+    #mainVideoRunningDiv{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:35vh; 
+        background-color: rgb(8, 7, 7);
+    }
+    #stylingScrollBarForVideoRunningBoxId{
+        position:absolute;
+        top:35vh;
+        left:0px;
+        height:calc(65vh - 50px);
+        width:100%;
+        
+        overflow: scroll;
+    }
+    #mainVideoInformantioDiv{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:20vh;
+        background-color: rgb(0, 0, 0);
+    }
+    #otherSectionDiv{
+        position:absolute;
+        top:20vh;
+        left:0px;
+        width:100%;
+        height:calc(60vh - 50px);
+        background-color: rgba(49, 49, 51, 0.247);
+        overflow:scroll;
+    }
+    #mainVideoInformantioDivPart1{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:15vh;
+        background-color: black;
+       
+    }
+    #mainVideoInformantioDivPart2{
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        width:100%;
+        height:5vh;
+        background-color: rgb(73, 70, 70);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #mainVideoInformantioDivPart1TVT1{
+        position:absolute;
+        top:0px;
+        left:65px;
+        height:6vh;
+        width:calc(100% - 65px);
+        overflow: hidden;
+        display: flex;
+        font-size: 15px;
+        font-family: sans-serif;
+        justify-content: start;
+        align-items: center;
+        text-overflow: ellipsis;
+    }
+    #mainVideoInformantioDivPart1TVT2{
+        position:absolute;
+        top:7.1vh;
+        left:65px;
+        width:calc(100% - 65px );
+        font-size: 14px;
+        color:rgb(143, 140, 137);
+        overflow: hidden;
+        font-family: sans-serif;
+    }
+    #mainVideoInformantioDivPart1TVT3{
+        position:absolute;
+        bottom:10px;
+        left:0px;
+        width:100%;
+        height:2vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+ 
+    }
+    #videoBar{
+        width:100%;
+        height:35vh;
+    }
+    #othersMychanelInformationNavigantionId{
+        gap:2vh;
+    }
+    .titleDescriptionlass{
+        width:250px;
+        min-height: 50px;
+    }
+    #videoGenereBoxId{
+        width:70%;
+    }
+    #chaneleNameChangeBoxId{
+        width:70%;
+    }
+    #downNavMainDivId{
+        justify-content:space-around;
+    }
+    #downNavMainDivId span:hover{
+        cursor: pointer;
+    }
+    #searchPageHeaderInputId{
+        width:100%;
+        height:35px;
+        position: absolute;
+        top:0px;
+        left:0px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #searchedAfterSuggestionPageId{
+        position: absolute;
+        top:35px;
+        left:0px;
+        width:100%;
+        height:calc(100vh - 85px);
+        overflow-y: scroll;
+    }
+    #searchItemId{
+        width:70%;
+        height:20px;
+    }
+    #SPPDChanelInfoU1{
+        position:relative;
+        width:100%;
+        height:100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        
+    }
+    #SPPDChanelInfo{
+        position:relative;
+        width:100%;
+        height:100px;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+}
+@media only screen and (min-width:600px){
+    #headerSearchDiv{
+        display:none;
+    }
+    #headerSearchBoxDiv{
+        display:block;
+        position:absolute;
+        right:0px;
+        width:70%;
+        top:10px;
+    }
+    #headerSearchBoxDiv input{
+        width:70%;
+        height:25px;
+    }
+    #menuBoxDiv{
+        width:15%;
+        min-width:160px;
+    }
+    #menuBoxBackSupportBox{
+        width:85%;
+        max-width:calc(100% - 160px);
+    }
+    .feedVideoCardClass{
+        width:326px;
+        margin:7px;
+        float: left;
+    }
+    #mainVideoRunningDiv{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:75%;
+        height:75vh;
+        background-color: rgb(3, 0, 5);
+    }
+    
+ 
+    #mainVideoInformantioDiv{
+        position:absolute;
+        left:0px;
+        bottom:0px;
+        width:75%;
+        height:20vh;
+        background-color: black;
+    }
+    #otherSectionDiv{
+        position:absolute;
+        bottom:0px;
+        right:0px;
+        width:25%;
+        height:calc(100vh - 50px);
+        background-color: rgba(31, 31, 34, 0.247);
+        overflow:scroll;
+    }
+    #mainVideoInformantioDivPart1{
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:55%;
+        height:20vh;
+       
+    }
+    #mainVideoInformantioDivPart2{
+        position:absolute;
+        bottom:60px;
+        right:0px;
+        width:45%;
+        height:calc(10vh - 60px);
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    #mainVideoInformantioDivPart1TVT1{
+        position:absolute;
+        top:0px;
+        left:65px;
+        width:calc(190% - 65px);
+        height:8.5vh;
+        display:flex;
+        align-items: center;
+        justify-content: start;
+        font-family: sans-serif;    
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+    }
+    
+    #mainVideoInformantioDivPart1TVT2{
+        position:absolute;
+        top:8.7vh;
+        left:65px;
+        width:calc(35% - 65px );
+        font-size: 13px;
+        color:rgb(143, 140, 137);
+        font-family: sans-serif;
+        overflow: hidden;
+    }
+    #mainVideoInformantioDivPart1TVT3{
+        position:absolute;
+        top:8.7vh;
+        right:0px;
+        width:65%;
+        height:2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:3vh;
+ 
+    }
+    #videoBar{
+        width:100%;
+        height:75vh;
+    }   
+    #othersMychanelInformationNavigantionId{
+        gap:6vh;
+    }
+    .titleDescriptionlass{
+        width:500px;
+        min-height: 50px;
+    }
+    #videoGenereBoxId{
+        width:350px;
+    }
+    #chaneleNameChangeBoxId{
+        width:350px;
+    }
+    #downNavMainDivId{
+        justify-content:center;
+        gap:5%;
+    }
+    #downNavMainDivId span:hover{
+        cursor: pointer;
+    }
+   #searchPageHeaderInputId{
+    display:none;
+   }
+   #searchedAfterSuggestionPageId{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:calc(100vh - 50px);
+    
+    overflow-y: scroll;
+}
+#SPPDChanelInfoU1{
+    position:relative;
+    width:100%;
+    height:140px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+#SPPDChanelInfo{
+    position:relative;
+    width:50%;
+    height:140px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+}
+#MVIDchanelLogoImg{
+    cursor:pointer;
+}
+#mainVideoInformantioDivPart2 button{
+    cursor: pointer;
+}
+#runningVideoSubscriberButtonId{
+    width:100px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: sans-serif;
+ 
+}
+#runningVideoSubscriberButtonId:hover{
+    color: rgba(20, 39, 77, 0.938);
+    cursor: pointer;
+}
+#headerSearchBoxDivSearchBut{
+    color: white;
+}
+#headerSearchBoxDivSearchBut:hover{
+    color: rgb(158, 32, 53);
+    cursor: pointer;
+}
+#MVID12chanelname{
+    max-width:120px;
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 13px;
+    text-align: justify;
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#MVID12SubscribingNumberId{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(202, 209, 238);
+    padding-left: 5px;
+}
+#likesMVID{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(202, 209, 238);
+}
+#headerDiv{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:50px;
+    background-color: rgb(46, 41, 41);
+}
+#menuBut{
+    position: absolute;
+    top:10px;
+    left:30px;
+    padding:5px;
+}
+#menuBut:hover{
+    background-color: rgba(240, 248, 255, 0.363);
+    cursor: pointer;
+}
+#menuBut div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+#menuBut span{
+    width: 20px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+#headerHeadingDiv{
+    position:absolute;
+    top:12px;
+    left:80px;
+    font-size: 22px;
+}
+#headerHeadingDiv:hover{
+    cursor:default;
+}
+#menuBoxDiv{
+    position: absolute;
+    top:50px;
+    left:0px;
+    height:92vh;
+    background-color: rgba(26, 23, 23, 0.568);
+    overflow: scroll;
+}
+#headerSearchDiv{
+    color:white;
+    padding: 2px;
+    
+    font-size: 15px;
+    
+
+}
+#headerSearchDiv:hover{
+    color: rgb(158, 32, 53);
+    cursor: pointer;
+}
+#menuBoxDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left:10px;
+    width: 90%;
+    height: 35px;
+    background-color: rgb(55, 54, 56);
+    color:antiquewhite;
+    font-weight: 500;
+
+}
+#menuBoxDiv div:hover{
+    background-color: rgb(46, 43, 43);
+    cursor: pointer;
+}
+.containClass{
+    position: absolute;
+    top:50px;
+    left:0px;
+    width:100%;
+    height:calc(100vh - 50px);
+    background-color: rgb(11, 2, 17);
+    overflow: scroll;
+    display:none;
+    color:white;
+}
+.feedVideoCardClass{
+    position: relative;
+    height:255px;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+.feedVideoThumbnailClass{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:175px;
+}
+.feedVideoThumbnailClass:hover{
+    cursor: pointer;
+}
+.feedVideochanelLogoClass{
+    position:absolute;
+    bottom:25px;
+    left:5px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.feedVideochanelLogoClass:hover{
+    cursor: pointer;
+}
+.feedVideoCardClass:hover{
+    opacity: 0.8;
+}
+.feedVideoTitleClass{
+    position:absolute;
+    top:185px;
+    right:0px;
+    width:77%;
+    height:50px;
+    overflow: hidden;
+}
+.feedVideoCNVTClass{
+    position:absolute;
+    bottom:19px;
+    right:0px;
+    width:77%;
+    font-size: 11px;
+    color:rgb(143, 140, 137);
+    overflow: hidden;
+}
+.registerloginPageClass{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:calc(100vh - 50px);
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2vh;
+
+}
+#profileImageId{
+    position:relative;
+    width:150px;
+    height:150px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 40px;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+#profileImageIdInput1{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:150px;
+    border: 1px solid black;
+    border-radius: 70px;
+    display: none;
+}
+#profileImageIdInput2{
+    position:absolute;
+    top:-25px;
+    left:-25px;
+    width:200px;
+    height:200px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+#profileImageIdInput2::-webkit-file-upload-button{
+    visibility: hidden;
+}
+#profileImageIdInput2:hover{
+    cursor: pointer;
+}
+#unwantedResponse{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:150px;
+    display:none;
+}
+#profileImageIdInput11{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:150px;
+    height:150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+#othersMychanelInformationId{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:calc(100vh - 50px);
+}
+#othersMychanelInformationNavigantionId{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 28, 39);
+}
+#othersMychanelInformationNavigantionId span:hover{
+    cursor:pointer;
+}
+.othersMychanelInformationContainIdSubClass{
+    display:none;
+    position:absolute;
+    top:0px;
+    top:30px;
+    width:100%;
+    height:calc(100vh - 80px);
+    overflow: scroll;
+}
+#choosenGenereForVideoPId:hover{
+    border: 1px solid red;
+    cursor: pointer;
+}
+#videoGenereBoxId span{
+    width:90%;
+    height:40px;
+    background-color: rgba(46, 62, 77, 0.808);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#videoGenereBoxId span:hover{
+    background-color: rgb(46, 62, 77);
+    cursor: pointer;
+}
+#downNavMainDivId{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+}
+#globalBackButtonId{
+    color:white;
+    width:24px;
+    height:24px;
+    position:absolute;
+    top:12px;
+    left:3px;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+#globalBackButtonId:hover{
+    background-color: rgba(255, 255, 255, 0.199);
+    cursor: pointer;
+}
+#libraryPageNavigation span:hover{
+    cursor:pointer;
+}
+#subscribePageNavigation span:hover{
+    cursor: pointer;
+}
+
+.subscribeingChanelCardClass{
+    position: relative;
+    width:70px;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    margin: 5px;
+    gap:5px;
+}
+
+
+.subscribeingChanelCardImageClass{
+    width:48px;
+    height:50px;
+    image-rendering:optimizeSpeed;
+}
+.subscribeingChanelCardImageClass:hover{
+    cursor: pointer;
+    opacity: 0.4;
+    width:47px;
+    height:59px;
+    border:1px solid rgb(214, 40, 40);
+}
+.subscribeingChanelCardChanelName{
+    max-width:48px;
+    max-width:65px;
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 11px;
+    text-align: justify;
+
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#SPPDChanelIconId{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+}
+#SPPDChanelIconWithName{
+    position:relative;
+    float: left;
+    width:100%;
+    height:140px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    margin-top: 20px;
+ 
+}
+#SPPDChanelNameId{
+    max-width:80px;
+    max-width:100px;
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-size: 13px;
+    text-align: justify;  
+    text-wrap: nowrap;     
+    white-space: nowrap;
+    
+}
+
+#SPPDChanelSubscribingButtonId:hover{
+    cursor: pointer;
+}
+
+#SPPDChanelInfo span{
+    color:rgb(150, 144, 144);
+    font-family: sans-serif;
+    font-size: 13px;
+}
+#mainVideoInformantioDivPart2 button{
+    background-color: #373a37; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 3px 5px; /* Add padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 13px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 8px; /* Rounded corners */
+
+}
+#mainVideoInformantioDivPart2 button:hover{
+    background-color:rgb(63, 44, 39);
+}
