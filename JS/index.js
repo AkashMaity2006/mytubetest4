@@ -122,7 +122,7 @@ function massageBox(mas){
 }
 
 let importantURL = {
-    mainURL:"https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/",
+    mainURL:"https://mytube-backend-2ki6.onrender.com/",
     post:{
         register:"/user/register",
         login:"",
@@ -584,7 +584,7 @@ function commonClickOnCardFun(fromwhere,e){
             globalPageHistoryArray.push([presentContain])
         }
         const form = {username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),selected_video_id:videoId}
-        fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/video/getselectedVideoDetails",{      
+        fetch("https://mytube-backend-2ki6.onrender.com/video/getselectedVideoDetails",{      
             method:"POST",
             body:JSON.stringify(form)
         })
@@ -643,7 +643,7 @@ function commonClickOnCardFun(fromwhere,e){
 
 document.getElementById("mainVideoInformantioDiv").addEventListener("click",(e)=>{
     if(e.target.id == "runningVideoSubscriberButtonId"){
-        fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/videoAddSLD/subAndUnSub",{
+        fetch("https://mytube-backend-2ki6.onrender.com/videoAddSLD/subAndUnSub",{
             method:"POST",
             body:JSON.stringify({username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),selected_video_id:presentRunningVideo.details["_id"]}),
             headers: {
@@ -674,7 +674,7 @@ document.getElementById("mainVideoInformantioDiv").addEventListener("click",(e)=
     if(e.target.id == "likeButtonMVID"){
         
       
-fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/videoAddSLD/likeAndUnLike",{
+fetch("https://mytube-backend-2ki6.onrender.com/videoAddSLD/likeAndUnLike",{
             method:"POST",
             body:JSON.stringify({username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),selected_video_id:presentRunningVideo.details["_id"]})
         })
@@ -701,7 +701,7 @@ fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit
     }
     if(e.target.id == "disLikeButtonMVID"){
     
-         fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/videoAddSLD/dislikeAndUnDislike",{
+         fetch("https://mytube-backend-2ki6.onrender.com/videoAddSLD/dislikeAndUnDislike",{
             method:"POST",
             body:JSON.stringify({username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),selected_video_id:presentRunningVideo.details["_id"]})
         })
@@ -782,7 +782,7 @@ document.getElementById("containFeedDiv1").addEventListener("scroll",(e)=>{
     if((document.getElementById("containFeedDiv1").scrollHeight - (document.getElementById("containFeedDiv1").clientHeight + document.getElementById("containFeedDiv1").scrollTop)) < 1){
         
         
-        videosDetailsFetching("containFeedDiv1","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMixedVideosController");      
+        videosDetailsFetching("containFeedDiv1","https://mytube-backend-2ki6.onrender.com/api/videos/gettingMixedVideosController");      
     } 
     /*else if(document.getElementById("containFeedDiv1").scrollTop == 0){
         massageBox("REFRESH")
@@ -793,7 +793,7 @@ document.getElementById("allMyVideoListOfMyChanelDivId").addEventListener("scrol
     
     if((document.getElementById("allMyVideoListOfMyChanelDivId").scrollHeight - (document.getElementById("allMyVideoListOfMyChanelDivId").clientHeight + document.getElementById("allMyVideoListOfMyChanelDivId").scrollTop)) < 1){
         
-        videosDetailsFetching("allMyVideoListOfMyChanelDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMyVideos");      
+        videosDetailsFetching("allMyVideoListOfMyChanelDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingMyVideos");      
     }           
 })
 
@@ -808,7 +808,7 @@ document.getElementById("libraryPageWatchedVideosDivId").addEventListener("scrol
     
     if((document.getElementById("libraryPageWatchedVideosDivId").scrollHeight - (document.getElementById("libraryPageWatchedVideosDivId").clientHeight + document.getElementById("libraryPageWatchedVideosDivId").scrollTop)) < 1){
         
-        videosDetailsFetching("libraryPageWatchedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingWatchedVideos");      
+        videosDetailsFetching("libraryPageWatchedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingWatchedVideos");      
     }           
 })
 
@@ -816,7 +816,7 @@ document.getElementById("libraryPageLikedVideosDivId").addEventListener("scroll"
     
     if((document.getElementById("libraryPageLikedVideosDivId").scrollHeight - (document.getElementById("libraryPageLikedVideosDivId").clientHeight + document.getElementById("libraryPageLikedVideosDivId").scrollTop)) < 1){
         
-        videosDetailsFetching("libraryPageLikedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingLikedVideos");      
+        videosDetailsFetching("libraryPageLikedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingLikedVideos");      
     }           
 })
 
@@ -826,20 +826,20 @@ function formDataPostFunction(fromwhere){
     let url = "";
     let payload = {username:"Akash maity",fullname:"Akash maity",passward:12345};
     if(fromwhere == "register1Form" || fromwhere == "register2Form"){
-        url = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/register";
+        url = "https://mytube-backend-2ki6.onrender.com/user/register";
         payload = {username: (document.getElementById("username1").value || document.getElementById("username2").value),fullname:(document.getElementById("fullname1").value || document.getElementById("fullname2").value),passward:(document.getElementById("passward1").value || document.getElementById("passward2").value)};
 
     }
     else if(fromwhere == "login1Form" || fromwhere == "login2Form"){
-        url = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/login";
+        url = "https://mytube-backend-2ki6.onrender.com/user/login";
         payload = {username: (document.getElementById("username3").value || document.getElementById("username4").value),passward:(document.getElementById("passward3").value || document.getElementById("passward4").value)};
     }
     else if(fromwhere == "logoutAccount"){
-        url = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/logout";
+        url = "https://mytube-backend-2ki6.onrender.com/user/logout";
         payload = {username:window.localStorage.getItem("username"),passward:window.localStorage.getItem("passward")}
     }
     else if(fromwhere == "deleteAccount"){
-        url = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/deleteAccount";
+        url = "https://mytube-backend-2ki6.onrender.com/user/deleteAccount";
         payload = {username:window.localStorage.getItem("username"),passward:window.localStorage.getItem("passward")}
     }
     
@@ -1044,7 +1044,7 @@ document.getElementById("libraryPageNavigation").addEventListener("click",(e)=>{
             document.getElementById("libraryPageNavigation").children[onsubscribePageNavigation].style.color = "white";
             onsubscribePageNavigation = 0;
             if(allMyGetWatchVideos.allVideoKeyList.length == 0){
-                videosDetailsFetching("libraryPageLikedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingWatchedVideos",0);      
+                videosDetailsFetching("libraryPageLikedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingWatchedVideos",0);      
             }
 
         }
@@ -1055,7 +1055,7 @@ document.getElementById("libraryPageNavigation").addEventListener("click",(e)=>{
             document.getElementById("libraryPageNavigation").children[1].style.color = "rgb(158, 32, 53)";
             onsubscribePageNavigation = 1;
             if(allMyGetLikedVideos.allVideoKeyList.length == 0){
-                videosDetailsFetching("libraryPageLikedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingLikedVideos",0);      
+                videosDetailsFetching("libraryPageLikedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingLikedVideos",0);      
             }
 
         }
@@ -1093,7 +1093,7 @@ function cancleUploadingVideo(){
 
 function uploadVideoWithDetailsToServer(username,passward,videoTitle,videoDescription,videoURL,thumbnailURL,genereOfVideo){
     const form = {username:username,passward:passward,title:videoTitle,description:videoDescription,video_url:videoURL,thumbnail_url:thumbnailURL,genare:genereOfVideo}
-    fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/video/uploadVideo",{
+    fetch("https://mytube-backend-2ki6.onrender.com/video/uploadVideo",{
        
         method:"POST",
         body:JSON.stringify(form)
@@ -1259,7 +1259,7 @@ function updateToServerFullName(){
 
     
         const form = {username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),newFullName:fullname}
-        fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/updateFullName",{
+        fetch("https://mytube-backend-2ki6.onrender.com/user/updateFullName",{
            
             method:"POST",
             body:JSON.stringify(form)
@@ -1299,55 +1299,55 @@ function videosDetailsFetching(whereaddHTML,url, typeOfFetching = 1){
             fetchVideoType = "mixed";
             alreadyGettingVideosKey = homeContainAllVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = homeContainAllVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMixedVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingMixedVideos";
         }
         else if(containTypeForRefresh == "music"){
             fetchVideoType = "music";
             alreadyGettingVideosKey = musicContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = musicContainVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMusicVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingMusicVideos";
         }
         else if(containTypeForRefresh == "movie"){
             fetchVideoType = "movie";
             alreadyGettingVideosKey = movieContainVideoDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = movieContainVideoDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMoviesVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingMoviesVideos";
         }
         else if(containTypeForRefresh == "education"){
             fetchVideoType = "education";
             alreadyGettingVideosKey = educationContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = educationContainVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingEducationVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingEducationVideos";
         }
         else if(containTypeForRefresh == "sports"){
             fetchVideoType = "sports";
             alreadyGettingVideosKey = sportsContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = sportsContainVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingSportsVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingSportsVideos";
         }
         else if(containTypeForRefresh == "reels"){
             fetchVideoType = "reels";
             alreadyGettingVideosKey = rellsContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = rellsContainVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingReelsVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingReelsVideos";
         }
         else if(containTypeForRefresh == "animation"){
             fetchVideoType = "animation";
             alreadyGettingVideosKey = animationContainVideoDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = animationContainVideoDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingAnimationVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingAnimationVideos";
         }
         else if(containTypeForRefresh == "vlog"){
             fetchVideoType = "vlog";
             alreadyGettingVideosKey = vlogContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingVlogVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingVlogVideos";
         }
         else if(containTypeForRefresh == "comedy"){
             fetchVideoType = "comedy";
             alreadyGettingVideosKey = comedyContainVideosDetails.allVideoKeyList;
             mainToConnecterVideosDeatils = comedyContainVideosDetails;
-            URL = "https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingComedyVideos";
+            URL = "https://mytube-backend-2ki6.onrender.com/api/videos/gettingComedyVideos";
         }
         
     }
@@ -1422,7 +1422,7 @@ function videosDetailsFetching(whereaddHTML,url, typeOfFetching = 1){
 
 function gettingFetchingAllMySubscribedChaneles(){
 
-    fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/user/getALlMySubscribedChanel",{
+    fetch("https://mytube-backend-2ki6.onrender.com/user/getALlMySubscribedChanel",{
         method:"POST",
         body:JSON.stringify({
             username:localStorage.getItem("username"),
@@ -1500,7 +1500,7 @@ document.getElementById("subscibePageChaneleIconDiv").addEventListener("click",(
 
 })
 function subscribationChanelChangeAndGettingVideoFetch(cardId){
-    fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/otherChaneleVideos",{
+    fetch("https://mytube-backend-2ki6.onrender.com/api/videos/otherChaneleVideos",{
         method:"POST",
         body:JSON.stringify({
             username:localStorage.getItem("username"),
@@ -1564,7 +1564,7 @@ function subscribationChanelChangeAndGettingVideo(type,cardId){
 
 
 function unsbscribeFromChaneleInfo(){
-    fetch("https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/videoAddSLD/subAndUnSubById",{
+    fetch("https://mytube-backend-2ki6.onrender.com/videoAddSLD/subAndUnSubById",{
             method:"POST",
             body:JSON.stringify({username:localStorage.getItem("username"),passward:localStorage.getItem("passward"),userId:allSubscribiedChanels.chhosenChanel.allDeatils.userId}),
             headers: {
@@ -1709,11 +1709,11 @@ addVideoFeedToVideoCard({id:"123456",thumbnail:"https://res.cloudinary.com/dt2yt
 
 
 if(navigator.onLine == true){
-    videosDetailsFetching("containFeedDiv1","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMixedVideosController",0);
+    videosDetailsFetching("containFeedDiv1","https://mytube-backend-2ki6.onrender.com/api/videos/gettingMixedVideosController",0);
 if(localStorage.getItem("username") && localStorage.getItem("passward")){
-    videosDetailsFetching("allMyVideoListOfMyChanelDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingMyVideos",0);
-    videosDetailsFetching("libraryPageWatchedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingWatchedVideos",0); 
-    videosDetailsFetching("libraryPageLikedVideosDivId","https://998ee7f7-cfcc-4190-aa81-30a4f6f75f62-00-2ms17jin26ghp.pike.replit.dev/api/videos/gettingLikedVideos",0);      
+    videosDetailsFetching("allMyVideoListOfMyChanelDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingMyVideos",0);
+    videosDetailsFetching("libraryPageWatchedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingWatchedVideos",0); 
+    videosDetailsFetching("libraryPageLikedVideosDivId","https://mytube-backend-2ki6.onrender.com/api/videos/gettingLikedVideos",0);      
 }
 gettingFetchingAllMySubscribedChaneles()
 }
